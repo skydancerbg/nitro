@@ -1,29 +1,22 @@
 #include <Arduino.h>
 #include "Nitrobot.h"
 
+// Using Cytron Maker Line sensor
+
 // Possible combinations of the infrared tracking sensor values in binary representation
 // Binary value 1 (5V) means line detected, binary 0 (0V) means no line detected
 // 0b in the beggining means binary, then each sensor reading in binary /1 or 0/
 // from left to right in the direction of robot movement
-// TODO originalnite s aktiwna nula!!!!!
-// #define IT_ALL_BLACK  0b000
-// #define IT_ALL_WHITE  0b111
-// #define IT_RIGHT1     0b011
-// #define IT_RIGHT2     0b001
-// #define IT_CENTER     0b101 
-// #define IT_CENTER1    0b010 //This combination is not possible when we use 3 sensors, if left and right sensors are on the line, the middle one will be on the line too
-// #define IT_LEFT1      0b110
-// #define IT_LEFT2      0b100
-// TODO invertirani originalnite !!!!!
+
 #define IT_ALL_BLACK  0b111
 #define IT_ALL_WHITE  0b000
-#define IT_RIGHT1     0b100 //0b011
-#define IT_RIGHT2     0b110//0b001
-#define IT_CENTER     0b010 //0b101 
-#define IT_CENTER1    0b101 //0b010 //This combination is not possible when we using 3 sensors
-                                    //if left and right sensors are on the line, the middle one will be on the line too
-#define IT_LEFT1      0b001 //0b110
-#define IT_LEFT2      0b011 //0b100
+#define IT_RIGHT1     0b100 
+#define IT_RIGHT2     0b110
+#define IT_CENTER     0b010  
+#define IT_CENTER1    0b101  //This combination is not possible when we using 3 sensors
+                             //if left and right sensors are on the line, the middle one will be on the line too
+#define IT_LEFT1      0b001 
+#define IT_LEFT2      0b011 
 
 static byte dat = 0;
 static int degree = 90;

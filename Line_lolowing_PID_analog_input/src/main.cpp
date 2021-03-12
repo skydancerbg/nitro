@@ -2,8 +2,6 @@
 
 // Stefan 13.11.2020 V2
 
-// https://tutorial.cytron.io/2019/08/21/esp32-pd-line-following-robot-with-maker-line/
-
 #include "Definitions.h"
 #include "Nitrobot.h"
 
@@ -40,17 +38,6 @@ void setup()
   pinMode(NB_CTRL_BTN_PIN, INPUT);
 
   adcSetPoint = analogRead(NB_LN_SENS_ANALOG_PIN);
-  // Serial.begin(115200);
-  // Serial.println("NITRObot PD Line Following Robot with Maker Line");
-  // digitalWrite(LED_BUILTIN, LOW); //LED ON
-
-  // while (digitalRead(NB_CTRL_BTN_PIN) == HIGH)
-  // {
-  //   adcSetPoint = analogRead(NB_LN_SENS_ANALOG_PIN);
-  //   Serial.print("ADC SET POINT:\t");
-  //   Serial.println(adcSetPoint);
-  //   delay(100);
-  // }
 }
 
 void loop()
@@ -61,9 +48,6 @@ void loop()
     previousMillis = currentMillis;
 
     adcMakerLine = analogRead(NB_LN_SENS_ANALOG_PIN);
-
-    // Serial.print("ADC:\t");
-    // Serial.println(adcMakerLine);
 
     if (adcMakerLine < 51)
     { // Out of line
@@ -122,8 +106,8 @@ void robotMove(int speedLeft, int speedRight)
     analogWrite(NB_MOTOR_LEFT_FWD_PIN, LOW);
     analogWrite(NB_MOTOR_LEFT_BKWD_PIN, speedL);
 
-      Sprint("ROBOT MOVE                            L: Left (-):\t");
-      Sprintln(speedLeft);
+    Sprint("ROBOT MOVE                      L: Left (-):\t");
+    Sprintln(speedLeft);
   }
 
   if (speedRight > 0)
@@ -133,7 +117,7 @@ void robotMove(int speedLeft, int speedRight)
     analogWrite(NB_MOTOR_RIGHT_FWD_PIN, speedR);
     analogWrite(NB_MOTOR_RIGHT_BKWD_PIN, LOW);
 
-    Sprint("ROBOT MOVE           Right:   \t");
+    Sprint("ROBOT MOVE    Right:   \t");
     Sprintln(speedRight);
   }
   else

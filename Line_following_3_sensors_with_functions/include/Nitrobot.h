@@ -44,17 +44,16 @@
 // #define NB_LN_SENS_ANALOG_PIN A15 // Connected to AN pin of the sensor
 
 // Define Cytron Maker Line sensor connection pins
-//! Za testa razmeniam liav i desen senzor!!!!!!! da se razkara
-//   Arduino MEGA pin:        Sensor pin:
-#define NB_LN_SENS_PIN_RIGHTEDGE 22       // right edge sensor - Connected to D1 pin of the sensor
-#define NB_LN_SENS_PIN_RIGHT 23       // right sensor - Connected to D2 pin of the sensor
-// #define NB_LN_SENS_PIN_RIGHT 25       // right sensor - Connected to D2 pin of the sensor
-#define NB_LN_SENS_PIN_MIDDLE 24       // middle sensor - Connected to D3 pin of the sensor
-#define NB_LN_SENS_PIN_LEFT 25       // left sensor Connected to D4 pin of the sensor
-// #define NB_LN_SENS_PIN_LEFT 23       // left sensor Connected to D4 pin of the sensor
-#define NB_LN_SENS_PIN_LEFTEDGE 26       // left edge sensor - Connected to D5 pin of the sensor
-#define NB_LN_SENS_CALIB_PIN 27   // Connected to CAL pin of the sensor
 // https://github.com/arduino/Arduino/blob/1.8.4/hardware/arduino/avr/variants/mega/pins_arduino.h#L51-L83
+//   Arduino MEGA pin:        Sensor pin:
+#define NB_LN_SENS_PIN_RIGHTEDGE 22 // right edge sensor - Connected to D1 pin of the sensor
+#define NB_LN_SENS_PIN_RIGHT 23     // right sensor - Connected to D2 pin of the sensor
+// #define NB_LN_SENS_PIN_RIGHT 25  // right sensor - Connected to D2 pin of the sensor
+#define NB_LN_SENS_PIN_MIDDLE 24    // middle sensor - Connected to D3 pin of the sensor
+#define NB_LN_SENS_PIN_LEFT 25      // left sensor Connected to D4 pin of the sensor
+// #define NB_LN_SENS_PIN_LEFT 23   // left sensor Connected to D4 pin of the sensor
+#define NB_LN_SENS_PIN_LEFTEDGE 26  // left edge sensor - Connected to D5 pin of the sensor
+#define NB_LN_SENS_CALIB_PIN 27     // Connected to CAL pin of the sensor
 #define NB_LN_SENS_ANALOG_PIN A15 // Connected to AN pin of the sensor
 
 
